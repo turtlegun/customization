@@ -14,7 +14,7 @@ fs.readFile("./models/model1.gltf", 'utf8', (err, data) => {
 
   try {
     // Write the string to a file with a .gltf extension
-    fs.writeFileSync('model6.gltf', JSON.stringify(gltfObject, null, 2), 'utf8');
+    fs.writeFileSync('model7.gltf', JSON.stringify(gltfObject, null, 2), 'utf8');
     console.log('GLTF file saved successfully.');
   } catch (err) {
     console.error('Error saving GLTF file:', err);

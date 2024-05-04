@@ -124,6 +124,18 @@ app.post('/upload_file', upload.single('model'), (req, res) => {
 
 
 
+  app.post('/upload_images_frontend', upload.array('image'), (req, res) => {
+   
+    req.files.forEach(file => {
+        fs.renameSync(file.path, `${file.originalname}`);
+    });
+
+
+    res.status(200).send('Images uploaded successfully');
+});
+
+
+
 
 var port = 5000
 
